@@ -1,0 +1,17 @@
+.toggle_block{
+    width: 170px;
+    height: 40px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.toggle_block:hover{
+    cursor: pointer;
+}
+.selected{
+    font-weight: 600;
+}

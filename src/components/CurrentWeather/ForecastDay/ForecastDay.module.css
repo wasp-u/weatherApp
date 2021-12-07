@@ -1,0 +1,13 @@
+.forecastDay{
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.weatherImg{
+    margin: 20px 0;
+}
+.time{
+    opacity: 0.8;
+}

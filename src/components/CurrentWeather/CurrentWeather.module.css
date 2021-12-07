@@ -1,0 +1,22 @@
+.currentWeather{
+    position: relative;
+    color: #343A40;
+    padding: 120px 0;
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+}
+.city{
+    font-size: 32px;
+}
+.time{
+    font-size: 18px;
+    opacity: 0.9;
+    margin: 10px 0 25px 0;
+}
+.temperature{
+    font-size: 96px;
+}
+.forecastDay{
+    display: flex;
+    justify-content: space-between;
+}
