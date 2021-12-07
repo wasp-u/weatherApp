@@ -24,11 +24,11 @@ const NowInfo = (props) => {
                         </div>
                         <div>
                             <p className={styles.title}>Wind Speed</p>
-                            <p className={styles.value}>{props.realTimeWeatherData.current.wind_kph} k/h</p>
+                            <p className={styles.value}>{props.realTimeWeatherData.current.wind_kph} Km/h</p>
                         </div>
                         <div>
                             <p className={styles.title}>Visibility</p>
-                            <p className={styles.value}>{props.realTimeWeatherData.current.vis_km} km</p>
+                            <p className={styles.value}>{props.realTimeWeatherData.current.vis_km} Km</p>
                         </div>
                         <div>
                             <p className={styles.title}>Pressure</p>

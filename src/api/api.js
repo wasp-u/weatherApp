@@ -43,3 +43,10 @@ export const realTimeWeatherApi = {
         return axios.request(options)
     }
 }
+
+export const ipAPI = {
+    async getIP() {
+        const res = await axios.get('https://geolocation-db.com/json/')
+        return res.data.IPv4
+    }
+}

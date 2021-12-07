@@ -1,4 +1,8 @@
 .forecastItem{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    justify-items: center;
+    border-top: 1px solid #343A40;
+    font-size: 18px;
+    font-weight: 300;
 }

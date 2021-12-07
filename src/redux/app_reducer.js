@@ -16,11 +16,4 @@ const appReducer = (state = initialState, action) => {
 
 export const setCfToggle = (payload) => ({ type: SET_CF_TOGGLE, payload })
 
-// export const getAuth = () => async (dispatch) => {
-//     let data = await authAPI.authMe()
-//     if (data.resultCode === 0) {
-//         dispatch(setUserData(data));
-//     }
-// }
-
 export default appReducer;

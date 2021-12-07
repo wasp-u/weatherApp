@@ -5,8 +5,8 @@ export const ForecastItem = (props) => {
             <p>{props.date}</p>
             <p>{props.daily_chance_of_rain}%</p>
             <p>{props.avghumidity}%</p>
-            <p>{props.maxwind_kph}k/h</p>
-            <p>{props.avgtemp_c}°C</p>
+            <p>{props.maxwind_kph} Km/h</p>
+            <p>{props.avgtemp}</p>
         </div>
     )
 }
