@@ -1,6 +1,6 @@
 .nowInfo{
     background: #343A40;
-    min-width: 1230px;
+    min-width: 100vw;
     color: white;
     padding: 25px 15px;
 }
@@ -29,4 +29,24 @@
 .title{
     font-size: 18px;
     opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .nowInfo{
+        min-width: 100vw;
+    }
+    .nowInfo span{
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .info{
+        flex-direction: column;
+    }
+    .info div{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .value{
+        font-weight: 500;
+    }
 }
