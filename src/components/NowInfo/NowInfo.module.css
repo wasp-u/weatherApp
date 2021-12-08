@@ -1,6 +1,7 @@
 .nowInfo{
     background: #343A40;
     /* height: 180px; */
+    width: 100%;
     color: white;
     padding: 25px 15px;
 }
@@ -11,6 +12,7 @@
 .info{
     display: flex;
     justify-content: space-between;
+
 }
 .info div{
     display: flex;

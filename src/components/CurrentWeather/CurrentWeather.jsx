@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { getForecast4Hours } from '../../redux/currentWeather_selector';
@@ -5,13 +6,25 @@ import { getForecastWeatherData } from './../../redux/search_reducer';
 import styles from './CurrentWeather.module.css';
 import { ForecastDay } from './ForecastDay/ForecastDay';
 
-const CurrentWeather = (props) => {
-    return (
-        <div className='wrapper'>
-            {props.forecastWeatherData
-                ? <div className={styles.currentWeather}>
 
-                    <div className={styles.nowWeather}>
+const CurrentWeather = (props) => {
+    const [selected, setSelected] = useState('')
+
+    useEffect(() => {
+        if (props.forecastWeatherData) setSelected(props.forecastWeatherData.location.localtime.split(' ')[1])
+    }, [props.forecastWeatherData])
+
+    const onItemClick = (value) => {
+        setSelected(value)
+    }
+
+    return (
+        <div className='wrapper'>{
+            props.forecastWeatherData
+                ? <div className={styles.currentWeather} >
+                    <div className={styles.nowWeather + ' ' + (props.forecastWeatherData.location.localtime.split(' ')[1] == selected ? styles.active : '')}
+                        onClick={() => onItemClick(props.forecastWeatherData.location.localtime.split(' ')[1])}
+                    >
                         <div>
                             <div className={styles.city}>{props.forecastWeatherData.location.name}</div>
                             <div className={styles.time}>{props.forecastWeatherData.location.localtime}</div>
@@ -24,19 +37,21 @@ const CurrentWeather = (props) => {
                     <div className={styles.forecastDay}>
                         {props.forecast4Hours.map(item =>
                             <ForecastDay key={item.time.split(' ')[1]}
+                                selected={selected}
                                 time={item.time.split(' ')[1]}
                                 img={'https://' + item.condition.icon}
                                 temperature={props.cfToggle === '°C'
                                     ? item.temp_c + '°C'
                                     : item.temp_f + '°F'
                                 }
+                                onClick={onItemClick}
                             />
                         )}
                     </div>
 
                 </div>
-                : <span>loading...</span>}
-        </div>
+                : <span>loading...</span>
+        } </div >
     )
 }
 

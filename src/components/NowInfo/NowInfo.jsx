@@ -7,14 +7,13 @@ const NowInfo = (props) => {
     // useEffect(() => {
     //     console.log(props.realTimeWeatherData);
     // }, [props.realTimeWeatherData])
-
     return (
         <div className={styles.nowInfo}>
             <span>Now</span>
             {props.realTimeWeatherData
                 ? <div className="wrapper">
-                    <div className={styles.info}>
-                        <div>
+                    <div className={styles.info} >
+                        <div >
                             <p className={styles.title}>Chance of Rain</p>
                             <p className={styles.value}>{props.realTimeWeatherData.current.cloud}%</p>
                         </div>

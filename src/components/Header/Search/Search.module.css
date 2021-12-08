@@ -7,14 +7,10 @@
     height: 40px;
     background: #FFFFFF;
     border-radius: 5px 0px 0px 5px;
-    border: none;
-    padding: 0 5px;
 }
 .input div{
-    border-style: none;
-}
-.input input:focus{
     border: none;
+    box-shadow: none;
 }
 .search button{
     display: inline-block;
@@ -28,4 +24,7 @@
 .search button:hover{
     cursor: pointer;
     background: #e3532c;
+}
+.search div:hover{
+    cursor:pointer !important;
 }

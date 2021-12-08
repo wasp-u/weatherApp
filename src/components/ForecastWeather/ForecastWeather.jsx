@@ -11,7 +11,7 @@ const ForecastWeather = (props) => {
     // }, [props.forecastWeatherData])
 
     return (
-        <div className={styles.forecastWeather}>
+        <div className='wrapper'>
             <div className={styles.itemsLabels}>
                 <p>DAY</p>
                 <p>CHANCE OF RAIN</p>

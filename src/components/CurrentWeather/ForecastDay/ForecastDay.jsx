@@ -1,8 +1,15 @@
 import styles from './ForecastDay.module.css'
 
-export const ForecastDay = ({ time, img, temperature }) => {
+export const ForecastDay = ({ time, img, temperature, onClick, selected }) => {
+
+    const onItemClick = (e) => {
+        onClick(time)
+    }
+    console.log(selected);
     return (
-        <div className={styles.forecastDay}>
+        <div className={styles.forecastDay + ' ' + (time == selected ? styles.active : '')}
+            onClick={onItemClick}
+        >
             <div className={styles.time}>
                 {time}
             </div>
@@ -12,6 +19,6 @@ export const ForecastDay = ({ time, img, temperature }) => {
             <div className={styles.temperature}>
                 {temperature}
             </div>
-        </div>
+        </div >
     )
 }

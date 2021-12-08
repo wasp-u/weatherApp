@@ -1,9 +1,7 @@
-.forecastWeather{
-    padding: 85px 100px;
-}
 .itemsLabels{
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
     justify-items: center;
     font-size: 24px;
+    margin-top: 80px;
 }
