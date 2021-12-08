@@ -9,9 +9,10 @@ const NowInfo = (props) => {
     // }, [props.realTimeWeatherData])
     return (
         <div className={styles.nowInfo}>
-            <span>Now</span>
+
             {props.realTimeWeatherData
                 ? <div className="wrapper">
+                    <span>Additional</span>
                     <div className={styles.info} >
                         <div >
                             <p className={styles.title}>Chance of Rain</p>

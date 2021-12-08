@@ -1,25 +1,26 @@
 .currentWeather{
+    max-width: 100vw;
     color: #343A40;
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: grid;
-    grid-template-columns: 3fr 9fr;
+    grid-template-columns: 1fr 3fr;
     align-items: end;
 }
 .city{
-    font-size: 2.5rem;
+    font-size: min(2.5em, 36px);
 }
 .time{
-    font-size: 1.2rem;
+    font-size: min(1.2em, 16px);
     font-weight: 300;
     opacity: 0.9;
     margin: .8rem 0 1.7rem 0;
 }
 .temperature{
-    font-size: 6rem;
+    font-size: min(7em, 96px);
 }
 .forecastDay{
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+   grid-template-columns: repeat(5, 20%);
 }
 .nowWeather{
     padding: 2.7rem 3rem;
@@ -49,7 +50,7 @@
         min-width: 100vw;
     }
     .city{
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
     .time{
         font-size: .8rem;
