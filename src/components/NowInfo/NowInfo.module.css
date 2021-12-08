@@ -1,7 +1,6 @@
 .nowInfo{
     background: #343A40;
-    /* height: 180px; */
-    width: 100%;
+    min-width: 1230px;
     color: white;
     padding: 25px 15px;
 }
