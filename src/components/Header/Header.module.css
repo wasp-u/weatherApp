@@ -1,17 +1,19 @@
 header{
-    height: 100px;
+    height: 6rem;
     width: 100%;
     background: #343A40;
     position: fixed;
+    display: flex;
+    align-items: center;
     top: 0;
     left: 0;
     z-index: 10;
 }
 .header_block{
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
     align-items: center;
-    justify-content: space-between;
-    padding: 29px;
+    justify-items: center;
 }
 .logo{
     display: flex;
@@ -19,12 +21,36 @@ header{
     flex-direction: column;
 }
 .logo img{
-    width: 35px;
+    width: 2rem;
 }
 .logo span{
     font-family: Roboto;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.5rem;
     color: #FFFFFF;
-    line-height: 23,44px;
+}
+@media (max-width: 768px) {
+    header{
+        height: 4rem;
+        width: 100%;
+        background: #343A40;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+    }
+    .header_block{
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+    .logo img{
+        width: 2rem;
+    }
+    .logo span{
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: .8rem;
+        color: #FFFFFF;
+    }
 }
