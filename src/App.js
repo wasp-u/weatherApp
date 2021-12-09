@@ -13,7 +13,6 @@ function App() {
 				<NowInfo />
 				<ForecastWeather />
 			</div>
-
 		</div>
 
 	);

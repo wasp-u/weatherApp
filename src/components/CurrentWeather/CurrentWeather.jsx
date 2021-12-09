@@ -5,6 +5,7 @@ import { getForecast4Hours } from '../../redux/currentWeather_selector';
 import { getForecastWeatherData } from './../../redux/search_reducer';
 import styles from './CurrentWeather.module.css';
 import { ForecastDay } from './ForecastDay/ForecastDay';
+import videoUrl from './../../video/Cloud.mp4'
 
 
 const CurrentWeather = (props) => {
@@ -26,6 +27,10 @@ const CurrentWeather = (props) => {
                         onClick={() => onItemClick(props.forecastWeatherData.location.localtime.split(' ')[1])}
                     >
                         <div>
+                            <video className={styles.bg_video}
+                                id='1' src={videoUrl}
+                                muted autoPlay loop
+                            ></video>
                             <div className={styles.city}>{props.forecastWeatherData.location.name}</div>
                             <div className={styles.time}>{props.forecastWeatherData.location.localtime}</div>
                             <div className={styles.temperature}>{props.cfToggle === '°C'

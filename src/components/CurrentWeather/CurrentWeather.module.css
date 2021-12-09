@@ -23,10 +23,13 @@
    grid-template-columns: repeat(5, 20%);
 }
 .nowWeather{
+    position: relative;
     padding: 2.7rem 3rem;
     max-width: 100%;
     border-radius: 24px 24px 0 0;
     transition: ease 0.5s;
+    overflow: hidden;
+    
 }
 .nowWeather:hover{
     cursor: pointer;
@@ -38,6 +41,17 @@
 }
 .active:hover{
     background: #343A40;
+}
+.bg_video{
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: 100%;
+    opacity: 0.4;
+    display: none;
+}
+.active video{
+    display: block
 }
 
 @media (max-width: 768px) {
@@ -69,5 +83,13 @@
         background: #343A40;
         border-radius: 0;
         min-width: 100vw;
+    }
+    .bg_video{
+        top: 0;
+        left: 0;
+        height: 100%;
+        /* width: 800px; */
+        opacity: 0.4;
+        display: block;
     }
 }

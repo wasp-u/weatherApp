@@ -46,7 +46,7 @@
     }
     .forecastDay:hover{
         cursor: pointer;
-        background: #343A40;
+        background: rgb(215, 215, 215);
     }
     
 }
