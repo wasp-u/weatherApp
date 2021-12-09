@@ -33,9 +33,9 @@
         border-radius: 0;
         min-width: 100vw;
         padding: .5rem;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
         border-bottom: 1px solid #343A40;
     }
     .weatherImg{
@@ -43,6 +43,10 @@
     }
     .weatherImg img{
         max-width: 2.5rem;
+    }
+    .forecastDay:hover{
+        cursor: pointer;
+        background: #343A40;
     }
     
 }

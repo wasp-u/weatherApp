@@ -10,16 +10,21 @@
 }
 .info{
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 1em;
+    max-width: calc(100vw - 30px);
 }
 .info div{
+    background: #3E454D;
+    border-radius: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 .info p{
+    font-size: 1.5rem;
     margin: 10px;
 }
 .value{
@@ -33,18 +38,25 @@
 
 @media (max-width: 768px) {
     .nowInfo{
-        min-width: 100vw;
+        max-width: 100%;
+        padding: 10px 10px 15px 10px;
     }
     .nowInfo span{
         font-size: 1rem;
         font-weight: 500;
     }
     .info{
-        flex-direction: column;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        max-width: 100%;
     }
     .info div{
-        flex-direction: row;
-        justify-content: space-between;
+        border-radius: 1rem;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .info p{
+        font-size: .8rem;
+        margin: 5px 10px;
     }
     .value{
         font-weight: 500;
