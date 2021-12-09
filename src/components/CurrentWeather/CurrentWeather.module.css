@@ -47,7 +47,7 @@
     top: 0;
     left: -50%;
     height: 100%;
-    opacity: 0.4;
+    opacity: 0.2;
     display: none;
 }
 .active video{
@@ -88,8 +88,6 @@
         top: 0;
         left: 0;
         height: 100%;
-        /* width: 800px; */
-        opacity: 0.4;
         display: block;
     }
 }

@@ -30,6 +30,7 @@ const CurrentWeather = (props) => {
                             <video className={styles.bg_video}
                                 id='1' src={videoUrl}
                                 muted autoPlay loop
+                                preload='auto'
                             ></video>
                             <div className={styles.city}>{props.forecastWeatherData.location.name}</div>
                             <div className={styles.time}>{props.forecastWeatherData.location.localtime}</div>
